@@ -197,12 +197,184 @@ df3 <- tibble(ID=c(1,2,4),measure3=c(4.7,3.5,9.3))
 full_join(df1,df3,by=c("sample"="ID"))
 
 #Realistic data
+library(tidyverse)
+#First, download gapminder_wide.csv file from the link to working directory. Then,
+gapminder_wide <- read_csv("data/gapminder_wide.csv")
 
+gapminder_long <- gapminder_wide %>%
+  gather(obstype_year,obs_values,starts_with("pop"),starts_with("gdpPercap"),starts_with("lifeExp"))
+  gapminder_long
 
+#Now the those two newly created columns have ; "obstype_year"=2 & "obs_values"=3 pieces of information.
+#Use separate() to split the character strings into multiple variables.
 
+  gapminder_separated <- gapminder_long %>%
+    separate(obstype_year,into = c("obs_type","year"),sep = "_")
+  gapminder_separated
+  
+#Now spread the 'gapminder_separated'data above to create a new data frame, the same as original gapminder data.
 
-
-
+  gapminder_orig <- gapminder_separated %>% 
+    spread(obs_type,obs_values)
+  
+#unite 
+  gapminder_separated %>% 
+    unite(obstype_year,obs_type,year)
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
 
 
