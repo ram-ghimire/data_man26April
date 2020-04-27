@@ -221,18 +221,18 @@ gapminder_long <- gapminder_wide %>%
   gapminder_separated %>% 
     unite(obstype_year,obs_type,year)
   
+#Factor for categorical data (used in statistical modelling)
+  gapminder_factor <- read_csv("data/gapminder.csv",col_types = cols(continent=col_factor()))
   
+  class(gapminder_factor$continent)
   
+  gapminder_factor$continent
+
+  levels(gapminder_factor$continent)
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  glimpse(gapminder_factor$continent)
+
+  summary(gapminder_factor$continent)  
   
   
   
