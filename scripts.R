@@ -234,18 +234,20 @@ gapminder_long <- gapminder_wide %>%
 
   summary(gapminder_factor$continent)  
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  storms
+nrow(storms)  
+ncol(storms)  
+colnames(storms)  
+dim(storms)  
+summary(storms)  
+head(storms,5)  
+tail(storms,6)  
+storms$pressure  
+levels(storms)  
+storms$category  
+levels(storms$category)  
+glimpse(storms$category)  
+
   
   
   
